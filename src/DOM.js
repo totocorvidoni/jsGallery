@@ -20,7 +20,7 @@ const DOM = (() => {
     setPic(element.dataset.picId);
   };
 
-  const nextActivate = () => {
+  const activateNext = () => {
     if (picture.dataset.picId === '6') {
       setPic(1);
     } else {
@@ -28,7 +28,7 @@ const DOM = (() => {
     }
   };
 
-  const prevActivate = () => {
+  const activatePrev = () => {
     if (picture.dataset.picId === '1') {
       setPic(6);
     } else {
@@ -42,11 +42,14 @@ const DOM = (() => {
         navActivate(this);
       }),
     );
-    prev.addEventListener('click', prevActivate);
-    next.addEventListener('click', nextActivate);
+    prev.addEventListener('click', activatePrev);
+    next.addEventListener('click', activateNext);
   };
 
-  return { setUpListeners };
+  return {
+    setUpListeners,
+    activateNext,
+  };
 })();
 
 export default DOM;
