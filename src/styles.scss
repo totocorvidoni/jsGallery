@@ -1,4 +1,6 @@
-$panel-grey: #5a6375;
+$panel-grey: #5b5863;
+$scale: scale(1.5);
+$transition: all 200ms ease-out;
 
 * {
   margin: 0;
@@ -7,27 +9,48 @@ $panel-grey: #5a6375;
 }
 
 body {
-  background: linear-gradient(to top left, #005f52, #150031, #005f52) fixed;
+  background: linear-gradient(to bottom right, #cffaae, #0a99b0, #0a0030) fixed;
   display: grid;
   place-content: center;
   place-items: center;
 }
 
 #frame {
+  display: grid;
+  align-content: center;
   background: #fff;
   border-bottom: 10px solid $panel-grey;
   border-radius: 20px;
-  // box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
   padding: 1em;
   margin: 2em 2em 0 2em;
   min-width: 600px;
-  height: auto;
-  img {
-    border-radius: 10px;
-    height: auto;
-    width: 100%;
-    object-fit: cover;
+  position: relative;
+}
+
+#picture {
+  border-radius: 10px;
+  max-height: 600px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.arrow {
+  position: absolute;
+  width: 32px;
+  top: 40%;
+  transition: $transition;
+  cursor: pointer;
+  &:hover {
+    transform: $scale;
   }
+}
+
+#prev {
+  left: 32px;
+}
+
+#next {
+  right: 32px;
 }
 
 nav {
@@ -40,14 +63,17 @@ nav {
   padding: 0 1em 0.5em 1em;
 }
 
-.circle {
+.dot {
   background: $panel-grey;
   border: 2px solid #fff;
   border-radius: 50%;
-  margin: 0 0.5em;
-  height: 15px;
-  width: 15px;
-  transition: background 250ms ease-out;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  transition: $transition;
+  &:hover {
+    transform: $scale;
+  }
 }
 
 .active-nav {
@@ -57,5 +83,5 @@ nav {
 .spacer {
   background: #fff;
   height: 2px;
-  width: 10px;
+  width: 8px;
 }
