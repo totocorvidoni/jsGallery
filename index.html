@@ -1,32 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Photo Gallery</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <main id="frame">
-    <img src="images/pic01.jpg" alt="">
-  </main>
-  <nav id="dots">
-    <div id="pic01" class="circle"></div>
-    <div class="spacer"></div>
-    <div id="pic02" class="circle"></div>
-    <div class="spacer"></div>
-    <div id="pic03" class="circle"></div>
-    <div class="spacer"></div>
-    <div id="pic04" class="circle"></div>
-    <div class="spacer"></div>
-    <div id="pic05" class="circle"></div>
-    <div class="spacer"></div>
-    <div id="pic06" class="circle"></div>
-  </nav>
-  <script src="index.js"></script>
-</body>
-
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Photo Gallery</title>
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="frame">
+      <img src="images/nav-left.svg" id="prev" class="arrow" />
+      <img src="images/pic-1.jpg" id="picture" data-pic-id="1" />
+      <img src="images/nav-right.svg" id="next" class="arrow" />
+    </main>
+    <nav id="nav-dots">
+      <div class="dot active-nav" data-pic-id="1"></div>
+      <div class="spacer"></div>
+      <div class="dot" data-pic-id="2"></div>
+      <div class="spacer"></div>
+      <div class="dot" data-pic-id="3"></div>
+      <div class="spacer"></div>
+      <div class="dot" data-pic-id="4"></div>
+      <div class="spacer"></div>
+      <div class="dot" data-pic-id="5"></div>
+      <div class="spacer"></div>
+      <div class="dot" data-pic-id="6"></div>
+    </nav>
+    <script src="main.js"></script>
+  </body>
 </html>
